@@ -58,30 +58,30 @@ public class Hashsets {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Double> items = new HashMap<>();
-        int choice = 0;
+        String choice ="";
         do {
             displayMenu();
-            choice = scanner.nextInt();
+            choice = scanner.next();
             scanner.nextLine(); // Consume newline
             switch (choice) {
-                case 1:
+                case "1":
                     addItem();
                     break;
-                case 2:
+                case "2":
                     removeItem();
                     break;
-                case 3:
+                case "3":
                     sortItems();
                     break;
-                case 4:
+                case "4":
                     viewItems();
                     break;
-                case 5:
+                case "5":
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        } while (choice != 5);
+        } while (choice != "5");
     }
 }
